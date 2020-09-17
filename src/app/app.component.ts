@@ -16,7 +16,9 @@ export class AppComponent {
   cardDetails: CardDetails[] = [];
 
   addCard(): void {
+
     this.cardDetails.push({ id: Math.random(), title: this.title || 'Card', content: this.content || 'This is card content' });
+
   }
   removeCard(card: CardDetails): void {
     this.cardDetails = this.cardDetails.filter(obj => obj.id !== card.id);
